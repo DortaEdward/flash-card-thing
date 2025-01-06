@@ -47,7 +47,10 @@ export async function POST(req: Request) {
     })
   }
 
+  console.log("User?")
+
   if (evt.type === "user.created") {
+    console.log("New User Incoming")
     const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
     const user = {
       clerkId: id,
